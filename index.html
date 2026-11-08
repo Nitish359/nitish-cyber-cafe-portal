@@ -1,60 +1,372 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="hi">
 <head>
-<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>NITISH CYBER CAFE DHARHARA | All Services</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>NITISH CYBER CAFE DHARHARA - Print Portal</title>
 <style>
-:root{--navy:#102b52;--blue:#1764a5;--gold:#e8b84a;--ink:#17263c;--muted:#66758b;--bg:#f3f6fb;--white:#fff}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,"Noto Sans Devanagari",sans-serif;background:var(--bg);color:var(--ink)}
-header{background:linear-gradient(120deg,#0d2343,#174f83);color:white;padding:18px max(18px,calc((100% - 1160px)/2));}
-.top{display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}.brand{font-weight:800;font-size:clamp(19px,3vw,28px);letter-spacing:.3px}.sub{color:#d7e6f6;font-size:12px;letter-spacing:1.6px;margin-top:5px}
-nav{display:flex;gap:8px;flex-wrap:wrap}nav a{color:#fff;text-decoration:none;padding:9px 12px;border:1px solid #ffffff45;border-radius:9px;font-size:13px}
-.hero{max-width:1160px;margin:auto;padding:32px 18px 22px;display:grid;grid-template-columns:1.4fr .8fr;gap:20px;align-items:center}
-.hero h1{font-size:clamp(26px,4vw,42px);line-height:1.18;margin:0 0 12px;color:var(--navy)}.hero p{color:var(--muted);line-height:1.65;margin:0 0 18px}
-.btn{display:inline-block;background:var(--gold);color:#17263c;text-decoration:none;border:0;border-radius:10px;padding:12px 17px;font-weight:700;cursor:pointer}.btn.blue{background:var(--blue);color:white}.hero-card{background:white;border:1px solid #e4eaf2;border-radius:18px;padding:22px;box-shadow:0 12px 30px #173a6210}.hero-card strong{font-size:18px;color:var(--navy)}.hero-card p{font-size:14px;margin:8px 0 0}
-.wrap{max-width:1160px;margin:auto;padding:10px 18px 38px}.section-head{display:flex;justify-content:space-between;align-items:end;gap:12px;flex-wrap:wrap;margin:12px 0 18px}.section-head h2{margin:0;color:var(--navy);font-size:24px}.section-head p{margin:5px 0 0;color:var(--muted);font-size:14px}
-.search{width:min(100%,340px);padding:12px 14px;border:1px solid #d9e1ec;border-radius:10px;font-size:15px;background:white}
-.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service{background:white;border:1px solid #e3e9f1;border-radius:15px;padding:17px;min-height:150px;transition:.15s}.service:hover{transform:translateY(-2px);box-shadow:0 10px 24px #15385c12}.ico{width:42px;height:42px;border-radius:12px;background:#eaf2fb;display:grid;place-items:center;font-size:22px;margin-bottom:12px}.service h3{font-size:16px;margin:0 0 7px;color:var(--navy)}.service p{font-size:13px;line-height:1.5;color:var(--muted);margin:0 0 12px}.service button{border:0;background:none;color:var(--blue);font-weight:700;padding:0;cursor:pointer}
-.panel{margin-top:28px;background:white;border:1px solid #e2e8f0;border-radius:16px;padding:20px}.panel h2{margin:0 0 8px;color:var(--navy)}.panel p{color:var(--muted);font-size:14px;line-height:1.55}
-.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.step{background:#f5f8fc;padding:15px;border-radius:12px}.step b{color:var(--blue)}
-footer{background:#0d2343;color:#d9e5f3;padding:25px 18px;text-align:center;font-size:14px}footer b{color:white}
-.modal{display:none;position:fixed;inset:0;background:#08182bbd;z-index:5;padding:16px;overflow:auto}.modal.show{display:grid;place-items:center}.dialog{width:min(100%,520px);background:white;border-radius:16px;padding:22px}.dialog h2{margin:0 0 14px;color:var(--navy)}.dialog label{display:block;font-size:13px;font-weight:700;margin:12px 0 5px}.dialog input,.dialog textarea,.dialog select{width:100%;padding:11px;border:1px solid #d6dfeb;border-radius:9px;font:inherit}.dialog textarea{min-height:75px}.actions{display:flex;gap:10px;margin-top:16px;flex-wrap:wrap}.close{float:right;border:0;background:#edf1f6;border-radius:8px;padding:7px 10px;cursor:pointer}
-@media(max-width:850px){.grid{grid-template-columns:repeat(2,1fr)}.hero{grid-template-columns:1fr}.steps{grid-template-columns:1fr}}
-@media(max-width:460px){.grid{grid-template-columns:1fr 1fr;gap:9px}.service{padding:13px;min-height:160px}.service h3{font-size:14px}.service p{font-size:12px}.hero{padding-top:24px}}
-</style></head>
+*{box-sizing:border-box}
+body{margin:0;font-family:Arial,sans-serif;background:#f1f5f9;color:#172033}
+header{background:#102b50;color:white;padding:22px 15px;text-align:center}
+header h1{margin:0;font-size:24px}
+header p{margin:7px 0 0}
+main{max-width:850px;margin:25px auto;padding:0 14px}
+.card{background:white;padding:20px;border-radius:12px;margin-bottom:18px;box-shadow:0 3px 12px #00000010}
+h2{font-size:20px;margin-top:0;color:#17365e}
+input,select,textarea{width:100%;padding:12px;margin:7px 0 14px;border:1px solid #cbd5e1;border-radius:7px;font-size:15px}
+button{background:#1265c7;color:white;border:0;padding:12px 18px;border-radius:7px;cursor:pointer;font-size:15px}
+button:disabled{opacity:.6}
+.secondary{background:#475569}
+.danger{background:#b42318}
+.hidden{display:none!important}
+.order{border:1px solid #dbe3ed;padding:14px;border-radius:9px;margin:12px 0}
+.status{font-weight:bold;color:#1265c7}
+.small{font-size:13px;color:#64748b}
+#message{padding:12px;border-radius:7px;margin-bottom:15px;display:none}
+footer{text-align:center;padding:20px;color:#64748b}
+</style>
+</head>
 <body>
-<header><div class="top"><div><div class="brand">NITISH CYBER CAFE DHARHARA</div><div class="sub">ALL ONLINE SERVICES • APPLY • PRINT • TRACK</div></div><nav><a href="#services">सभी सेवाएँ</a><a href="#how">कैसे काम करता है</a><a href="#contact">संपर्क</a></nav></div></header>
-<section class="hero"><div><h1>आपकी सभी ऑनलाइन सेवाएँ, अब एक ही जगह</h1><p>सरकारी फॉर्म, प्रमाण पत्र, एडमिशन, स्कॉलरशिप, प्रिंट और अन्य डिजिटल सेवाओं के लिए सहायता। अपनी सेवा चुनें और आवेदन शुरू करें।</p><a class="btn" href="#services">सेवाएँ देखें</a> <a class="btn blue" href="https://wa.me/919304805719" target="_blank" rel="noopener">WhatsApp करें</a></div><div class="hero-card"><strong>ऑनलाइन आवेदन सहायता</strong><p>सेवा चुनें → अपनी जानकारी दें → दस्तावेज़ साझा करें → आवेदन की स्थिति जानें।</p><p><b>Call / WhatsApp:</b> 9304805719<br><b>पता:</b> धरहारा</p></div></section>
-<main class="wrap"><div class="section-head"><div><h2 id="services">हमारी सभी सेवाएँ</h2><p>नीचे सेवा चुनकर आवेदन या जानकारी के लिए संपर्क करें।</p></div><input id="search" class="search" placeholder="सेवा खोजें..." aria-label="सेवा खोजें"></div>
-<div class="grid" id="grid"></div>
-<section class="panel" id="how"><h2>आवेदन की प्रक्रिया</h2><p>ऑनलाइन आवेदन सुविधा चालू होने के बाद ग्राहक लॉगिन करके दस्तावेज़ अपलोड कर सकेंगे और अपने आवेदन की स्थिति देख सकेंगे।</p><div class="steps"><div class="step"><b>01 · सेवा चुनें</b><p>अपनी जरूरत की सेवा चुनें।</p></div><div class="step"><b>02 · जानकारी दें</b><p>आवश्यक विवरण और दस्तावेज़ साझा करें।</p></div><div class="step"><b>03 · स्टेटस देखें</b><p>आवेदन की प्रगति पोर्टल पर देखें।</p></div></div></section>
-<section class="panel" id="contact"><h2>संपर्क करें</h2><p><b>NITISH CYBER CAFE DHARHARA</b><br>Call / WhatsApp: 9304805719<br>पता: धरहारा</p><a class="btn blue" href="https://wa.me/919304805719" target="_blank" rel="noopener">WhatsApp पर संपर्क करें</a></section>
-</main><footer><b>NITISH CYBER CAFE DHARHARA</b><br>Call / WhatsApp: 9304805719 · धरहारा<br><small>यह शुरुआती डिज़ाइन/प्रोटोटाइप है। ऑनलाइन लॉगिन, सुरक्षित फाइल अपलोड और एडमिन पैनल को Supabase से जोड़ना अगला चरण है।</small></footer>
-<div class="modal" id="modal"><div class="dialog"><button class="close" onclick="closeModal()">बंद करें ✕</button><h2 id="modalTitle">सेवा आवेदन</h2><p id="modalDesc" style="color:#66758b;font-size:14px"></p><form id="applyForm"><label>आपका नाम</label><input id="custName" required placeholder="पूरा नाम"><label>मोबाइल नंबर</label><input id="custPhone" required inputmode="numeric" pattern="[0-9]{10}" placeholder="10 अंकों का मोबाइल नंबर"><label>सेवा से जुड़ी जानकारी</label><textarea id="custNote" placeholder="कौन-सा काम करवाना है?"></textarea><div class="actions"><button class="btn blue" type="submit">WhatsApp पर भेजें</button><button class="btn" type="button" onclick="closeModal()">रद्द करें</button></div></form></div></div>
+
+<header>
+<h1>NITISH CYBER CAFE DHARHARA</h1>
+<p>Online Print Order & Customer Portal</p>
+<p>Call / WhatsApp: 9304805719</p>
+</header>
+
+<main>
+<div id="message"></div>
+
+<section class="card" id="authCard">
+<h2>Customer / Admin Login</h2>
+<form id="loginForm">
+<label>Email Address</label>
+<input id="email" type="email" required placeholder="अपना Email लिखें">
+<label>Password</label>
+<input id="password" type="password" required placeholder="Password">
+<button type="submit">Login</button>
+</form>
+<hr>
+<h3>नया Customer Account बनाएं</h3>
+<form id="signupForm">
+<input id="newName" required placeholder="पूरा नाम">
+<input id="newPhone" required placeholder="मोबाइल नंबर" maxlength="10">
+<input id="newEmail" type="email" required placeholder="Email Address">
+<input id="newPassword" type="password" minlength="6" required placeholder="कम से कम 6 अक्षर का Password">
+<button type="submit">Create Account</button>
+</form>
+<p class="small">नया अकाउंट बनाने के बाद Email Confirmation की जरूरत पड़ सकती है।</p>
+</section>
+
+<section class="card hidden" id="dashboard">
+<div style="display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap">
+<h2 id="welcome">Dashboard</h2>
+<button class="secondary" id="logoutBtn">Logout</button>
+</div>
+
+<div id="customerArea">
+<h3>नया Print Order भेजें</h3>
+<form id="orderForm">
+<label>Customer Name</label>
+<input id="customerName" required placeholder="आपका नाम">
+<label>Mobile Number</label>
+<input id="customerPhone" required maxlength="10" placeholder="मोबाइल नंबर">
+<label>Print Type</label>
+<select id="printType">
+<option value="Black & White">Black & White</option>
+<option value="Color">Color</option>
+<option value="Photocopy">Photocopy</option>
+</select>
+<label>Paper Size</label>
+<select id="paperSize">
+<option value="A4">A4</option>
+<option value="A3">A3</option>
+<option value="Legal">Legal</option>
+</select>
+<label>Copies</label>
+<input id="copies" type="number" min="1" max="500" value="1" required>
+<label>PDF / JPG / PNG File (Maximum 15 MB)</label>
+<input id="file" type="file" accept=".pdf,.jpg,.jpeg,.png" required>
+<label>Extra Instructions</label>
+<textarea id="notes" rows="3" placeholder="कोई विशेष निर्देश हो तो लिखें"></textarea>
+<button type="submit" id="submitOrder">Submit Print Order</button>
+</form>
+</div>
+
+<div id="adminArea" class="hidden">
+<h3>Admin Dashboard</h3>
+<p>सभी Customers के Print Orders यहाँ दिखाई देंगे।</p>
+</div>
+
+<hr>
+<h3 id="ordersHeading">My Orders</h3>
+<div id="ordersList">Orders लोड हो रहे हैं...</div>
+</section>
+</main>
+
+<footer>
+NITISH CYBER CAFE DHARHARA · धरहारा
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <script>
-const services=[
-["📄","जाति, आय एवं निवास प्रमाण पत्र","आवेदन और प्रमाण पत्र संबंधी सहायता","Certificate"],
-["🍼","जन्म प्रमाण पत्र","जन्म प्रमाण पत्र आवेदन संबंधी सहायता","Certificate"],
-["🪪","PAN Card","नया PAN और सुधार संबंधी सहायता","Identity"],
-["🗳️","Voter ID","नया वोटर कार्ड और सुधार","Identity"],
-["🚘","Driving Licence","लाइसेंस आवेदन और अपडेट सहायता","Identity"],
-["🎓","Scholarship","छात्रवृत्ति फॉर्म और स्टेटस सहायता","Education"],
-["🏫","Admission","स्कूल, कॉलेज और विश्वविद्यालय एडमिशन","Education"],
-["📝","Exam & Recruitment Forms","परीक्षा और भर्ती के ऑनलाइन फॉर्म","Education"],
-["👴","Pension & eLabharthi","पेंशन और आधार सीडिंग संबंधी सहायता","Government"],
-["🌾","PM-Kisan","किसान योजना और स्टेटस संबंधी सहायता","Government"],
-["🚆","Train Ticket","रेल टिकट बुकिंग सहायता","Travel"],
-["🖨️","Print, Scan & Photocopy","प्रिंट, स्कैन, फोटो और दस्तावेज़ सेवाएँ","Print"],
-["📑","Resume & Typing","बायोडाटा, हिंदी/अंग्रेज़ी टाइपिंग","Print"],
-["📷","Photo & Signature","फोटो और सिग्नेचर तैयार करना","Print"],
-["🏦","Online Banking Assistance","उपलब्ध डिजिटल बैंकिंग सेवाओं में सहायता","Other"],
-["📂","Other Online Services","अन्य ऑनलाइन फॉर्म और डिजिटल सेवाएँ","Other"]
-];
-const grid=document.getElementById('grid');
-function render(q=""){grid.innerHTML="";services.filter(s=>s.join(" ").toLowerCase().includes(q.toLowerCase())).forEach(s=>{let d=document.createElement('article');d.className="service";d.innerHTML=`<div class="ico">${s[0]}</div><h3>${s[1]}</h3><p>${s[2]}</p><button type="button">आवेदन / जानकारी →</button>`;d.querySelector('button').onclick=()=>openModal(s[1],s[2]);grid.appendChild(d)})}
-document.getElementById('search').addEventListener('input',e=>render(e.target.value));
-function openModal(title,desc){document.getElementById('modalTitle').textContent=title;document.getElementById('modalDesc').textContent=desc;document.getElementById('modal').classList.add('show')}
-function closeModal(){document.getElementById('modal').classList.remove('show')}
-document.getElementById('applyForm').addEventListener('submit',e=>{e.preventDefault();let title=document.getElementById('modalTitle').textContent;let msg=`नमस्ते, मुझे ${title} सेवा चाहिए।%0Aनाम: ${encodeURIComponent(document.getElementById('custName').value)}%0Aमोबाइल: ${encodeURIComponent(document.getElementById('custPhone').value)}%0Aजानकारी: ${encodeURIComponent(document.getElementById('custNote').value)}`;window.open('https://wa.me/919304805719?text='+msg,'_blank');closeModal()});
-render();
-</script></body></html>
+const SUPABASE_URL = "https://zvodkhcjamntxwtgxdfb.supabase.co";
+const SUPABASE_KEY = "sb_publishable_J64_-PUCu9mLjAx3a8p0vQ_gr7xiO_A";
+const ADMIN_EMAIL = "nitishcybercafedharhara@gmail.com";
+const BUCKET = "print-files";
+
+const db = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+const $ = id => document.getElementById(id);
+
+function message(text, error=false) {
+  const box = $("message");
+  box.textContent = text;
+  box.style.display = "block";
+  box.style.background = error ? "#fee2e2" : "#dcfce7";
+  box.style.color = error ? "#991b1b" : "#166534";
+  box.scrollIntoView({behavior:"smooth",block:"nearest"});
+}
+
+function escapeHTML(value) {
+  return String(value ?? "").replace(/[&<>"']/g, c => ({
+    "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"
+  }[c]));
+}
+
+let currentUser = null;
+let isAdmin = false;
+
+$("loginForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const {error} = await db.auth.signInWithPassword({
+    email:$("email").value.trim(),
+    password:$("password").value
+  });
+  if(error) message(error.message,true);
+});
+
+$("signupForm").addEventListener("submit", async e => {
+  e.preventDefault();
+  const name = $("newName").value.trim();
+  const phone = $("newPhone").value.trim();
+
+  if(!/^[0-9]{10}$/.test(phone)) {
+    message("कृपया सही 10 अंकों का मोबाइल नंबर लिखें।",true);
+    return;
+  }
+
+  const {data,error} = await db.auth.signUp({
+    email:$("newEmail").value.trim(),
+    password:$("newPassword").value,
+    options:{data:{full_name:name,phone:phone}}
+  });
+
+  if(error) return message(error.message,true);
+
+  if(data.session) {
+    message("Account बन गया है।");
+  } else {
+    message("Account बन गया है। कृपया Email Confirmation करें, फिर Login करें।");
+  }
+});
+
+$("logoutBtn").addEventListener("click", async () => {
+  await db.auth.signOut();
+});
+
+async function loadOrders() {
+  if(!currentUser) return;
+
+  $("ordersList").textContent = "Orders लोड हो रहे हैं...";
+
+  const {data,error} = await db
+    .from("print_orders")
+    .select("*")
+    .order("created_at",{ascending:false});
+
+  if(error) {
+    $("ordersList").textContent = error.message;
+    return;
+  }
+
+  if(!data || data.length===0) {
+    $("ordersList").textContent = "अभी कोई Print Order नहीं है।";
+    return;
+  }
+
+  $("ordersList").innerHTML = "";
+
+  for(const order of data) {
+    const item = document.createElement("div");
+    item.className = "order";
+
+    const date = order.created_at
+      ? new Date(order.created_at).toLocaleString("en-IN")
+      : "";
+
+    item.innerHTML = `
+      <b>Order ID:</b> ${escapeHTML(order.id)}<br>
+      <b>Customer:</b> ${escapeHTML(order.customer_name)}<br>
+      <b>Mobile:</b> ${escapeHTML(order.phone)}<br>
+      <b>File:</b> ${escapeHTML(order.file_name)}<br>
+      <b>Print:</b> ${escapeHTML(order.print_type)}<br>
+      <b>Paper:</b> ${escapeHTML(order.paper_size)}<br>
+      <b>Copies:</b> ${escapeHTML(order.copies)}<br>
+      <b>Date:</b> ${escapeHTML(date)}<br>
+      <b>Status:</b> <span class="status">${escapeHTML(order.status)}</span>
+      <div class="fileArea"></div>
+      ${isAdmin ? `
+        <label>Update Status</label>
+        <select class="statusSelect">
+          <option value="pending">Pending</option>
+          <option value="processing">Processing</option>
+          <option value="ready">Ready</option>
+          <option value="delivered">Delivered</option>
+          <option value="cancelled">Cancelled</option>
+        </select>
+        <button class="updateBtn">Update Status</button>
+      ` : ""}
+    `;
+
+    $("ordersList").appendChild(item);
+
+    const fileArea = item.querySelector(".fileArea");
+    const fileButton = document.createElement("button");
+    fileButton.className = "secondary";
+    fileButton.style.marginTop = "10px";
+    fileButton.textContent = "View / Download File";
+    fileButton.addEventListener("click", async () => {
+      const {data,error} = await db.storage
+        .from(BUCKET)
+        .createSignedUrl(order.file_path,60);
+
+      if(error) return message(error.message,true);
+      window.open(data.signedUrl,"_blank","noopener");
+    });
+    fileArea.appendChild(fileButton);
+
+    if(isAdmin) {
+      const select = item.querySelector(".statusSelect");
+      select.value = order.status;
+
+      item.querySelector(".updateBtn").addEventListener("click", async () => {
+        const newStatus = select.value;
+        const {error} = await db.from("print_orders")
+          .update({status:newStatus})
+          .eq("id",order.id);
+
+        if(error) return message(error.message,true);
+        message("Order Status Update हो गया।");
+        loadOrders();
+      });
+    }
+  }
+}
+
+$("orderForm").addEventListener("submit", async e => {
+  e.preventDefault();
+
+  if(!currentUser) return message("पहले Login करें।",true);
+
+  const file = $("file").files[0];
+  if(!file) return message("कृपया फाइल चुनें।",true);
+
+  const allowed = ["application/pdf","image/jpeg","image/png"];
+  if(!allowed.includes(file.type)) {
+    return message("केवल PDF, JPG और PNG फाइल मान्य हैं।",true);
+  }
+
+  if(file.size > 15*1024*1024) {
+    return message("फाइल 15 MB से छोटी होनी चाहिए।",true);
+  }
+
+  const phone = $("customerPhone").value.trim();
+  if(!/^[0-9]{10}$/.test(phone)) {
+    return message("सही 10 अंकों का मोबाइल नंबर लिखें।",true);
+  }
+
+  $("submitOrder").disabled = true;
+  $("submitOrder").textContent = "Uploading...";
+
+  try {
+    const safeName = file.name.replace(/[^a-zA-Z0-9._-]/g,"_");
+    const filePath = currentUser.id + "/" + crypto.randomUUID() + "_" + safeName;
+
+    const {error:uploadError} = await db.storage
+      .from(BUCKET)
+      .upload(filePath,file,{contentType:file.type,upsert:false});
+
+    if(uploadError) throw uploadError;
+
+    const {error:insertError} = await db.from("print_orders").insert({
+      user_id:currentUser.id,
+      customer_name:$("customerName").value.trim(),
+      phone:phone,
+      file_path:filePath,
+      file_name:file.name,
+      mime_type:file.type,
+      print_type:$("printType").value,
+      paper_size:$("paperSize").value,
+      copies:Number($("copies").value),
+      notes:$("notes").value.trim(),
+      status:"pending"
+    });
+
+    if(insertError) throw insertError;
+
+    message("आपका Print Order सफलतापूर्वक भेज दिया गया है।");
+    $("orderForm").reset();
+    loadOrders();
+
+  } catch(error) {
+    message(error.message || "Order Submit नहीं हुआ।",true);
+  } finally {
+    $("submitOrder").disabled = false;
+    $("submitOrder").textContent = "Submit Print Order";
+  }
+});
+
+async function showDashboard(user) {
+  currentUser = user;
+  isAdmin = (user.email || "").toLowerCase() === ADMIN_EMAIL.toLowerCase();
+
+  $("authCard").classList.add("hidden");
+  $("dashboard").classList.remove("hidden");
+
+  $("welcome").textContent = isAdmin ? "Admin Dashboard" : "Customer Dashboard";
+  $("adminArea").classList.toggle("hidden",!isAdmin);
+  $("customerArea").classList.toggle("hidden",isAdmin);
+  $("ordersHeading").textContent = isAdmin ? "All Customer Orders" : "My Orders";
+
+  if(!isAdmin) {
+    $("customerName").value = user.user_metadata?.full_name || "";
+    $("customerPhone").value = user.user_metadata?.phone || "";
+  }
+
+  await loadOrders();
+}
+
+async function showLogin() {
+  currentUser = null;
+  isAdmin = false;
+  $("authCard").classList.remove("hidden");
+  $("dashboard").classList.add("hidden");
+}
+
+db.auth.onAuthStateChange((_event,session) => {
+  if(session?.user) {
+    showDashboard(session.user);
+  } else {
+    showLogin();
+  }
+});
+
+(async () => {
+  const {data} = await db.auth.getSession();
+  if(data.session?.user) await showDashboard(data.session.user);
+  else await showLogin();
+})();
+</script>
+</body>
+</html>
